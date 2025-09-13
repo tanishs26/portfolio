@@ -25,7 +25,8 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className="">
         <body
-          className={`${dmSans.className} bg-neutral-100 dark:bg-black antialiased  selection:bg-neutral-900 selection:text-neutral-300 relative divide-y-1`}
+          className={`${dmSans.className} bg-neutral-100 
+          dark:bg-black antialiased  selection:bg-neutral-900 selection:text-neutral-300 dark:selection:bg-neutral-50 dark:selection:text-neutral-800 relative `}
         >
           <Cursor/>
           <Navbar />

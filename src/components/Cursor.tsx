@@ -38,12 +38,12 @@ const Cursor = () => {
     <>
       <span
         ref={cursorDot}
-        className="cursor-dot fixed w-[5px] h-[5px] bg-primary dark:bg-primary rounded-full pointer-events-none z-50 transition-transform duration-75 ease-out"
+        className="hidden lg:block cursor-dot fixed w-[5px] h-[5px] bg-primary dark:bg-primary rounded-full pointer-events-none z-50 transition-transform duration-75 ease-out"
         style={{ opacity: 0 }}
       ></span>
       <span
         ref={cursorOutline}
-        className="cursor-outline fixed w-[25px] h-[25px] border-2 border-primary dark:border-primary rounded-full pointer-events-none z-40 transition-transform duration-150 ease-out"
+        className="hidden lg:block cursor-outline fixed w-[25px] h-[25px] border-2 border-primary dark:border-primary rounded-full pointer-events-none z-40 transition-transform duration-150 ease-out"
         style={{ opacity: 0 }}
       ></span>
     </>

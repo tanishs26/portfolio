@@ -27,6 +27,7 @@ const Navbar = () => {
   const [shadow, setShadow] = useState<boolean | string>(false);
   const { scrollY } = useScroll();
 
+  
   const toggleDark = () => {
     setIsDark((prev) => !prev);
     document.body.classList.toggle("dark");
@@ -105,7 +106,7 @@ const Navbar = () => {
                     className="-z-10 rounded-md w-full h-full  bg-neutral-300 dark:bg-neutral-800 backdrop-blur-sm inset-0 absolute "
                   ></motion.span>
                 )}
-                <span className="relative text-primary text-shadow-sm  font-semibold text-md">
+                <span className="relative text-primary dark:text-primary  text-shadow-2xs font-medium text-md">
                   {" "}
                   {item.title}
                 </span>

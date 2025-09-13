@@ -1,2 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme  {
+  --color-primary: var(--color-neutral-800);
+  --color-secondary: var(--color-neutral-600);
+  --shadow-input: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+body{
+  cursor: none;
+}
+
+.dark {
+  --color-primary: var(--color-neutral-100);
+  --color-secondary: var(--color-neutral-400);
+    --shadow-input: 0 3px 10px rgb(211, 211, 211/0.3);
+
+}

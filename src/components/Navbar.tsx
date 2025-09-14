@@ -31,6 +31,7 @@ const Navbar = () => {
   const toggleDark = () => {
     setIsDark((prev) => !prev);
     document.body.classList.toggle("dark");
+    
   };
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 15) {

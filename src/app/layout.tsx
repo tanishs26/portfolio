@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ViewTransitions } from "next-view-transitions";
 import Cursor from "@/components/Cursor";
+import { Toaster } from "sonner";
 
 
-const dmSans = Inter({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +23,11 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className="">
         <body
-          className={`${dmSans.className} bg-neutral-100 
+          className={` bg-neutral-100 
+            
           dark:bg-black antialiased  selection:bg-neutral-900 selection:text-neutral-300 dark:selection:bg-neutral-50 dark:selection:text-neutral-800 relative `}
         >
+          <Toaster position="top-center"/>
           <Cursor/>
           <Navbar />
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../../components/Container";
-
+import {projects} from "@/components/ProjectArray"
 import Heading from "@/components/Heading";
 import Subheading from "@/components/Subheading";
 import Projects from "@/components/Projects";
@@ -24,7 +24,7 @@ const Page = () => {
       </div>
       <div className=" p-4 w-full flex flex-col justify-center  ">
         <DotBox>Selected Projects</DotBox>
-        <Projects  />
+        <Projects projects={projects} />
       </div>
     </Container>
   );

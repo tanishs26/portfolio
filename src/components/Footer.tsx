@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Container from "./Container";
 import { motion, useAnimate } from "framer-motion";
 import { toast } from "sonner";
+import DotBox from "./DotBox";
 
 const enquiry = [
   {
@@ -80,25 +81,19 @@ const Footer = () => {
   }, [count, animate]);
 
   return (
-    <Container className="p-4 mt-10">
+    <Container className="p-4 mt-10 ">
       <div ref={scope} className="w-full flex justify-center ">
-        <span className="enq text-secondary bg-gray-300/10 dark:bg-white/15 dark:text-secondary text-center font-semibold text-2xl shadow-input/60 px-4 rounded-md py-1">
+        <span className="enq text-secondary bg-gray-300/10 dark:bg-white/15 dark:text-secondary text-center font-semibold text-xl shadow-input/60 px-4 rounded-md py-1">
           {enquiry[count].title}
         </span>
       </div>
       <div className="w-full md:w-[60%] mt-7  ">
-        <h1 className="text-shadow-xs text-primary px-2 bg-black/10 dark:bg-white/10 w-fit relative">
-          Let's get in touch
-          <span className="absolute w-1 h-1 -top-1 -right-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-          <span className="absolute w-1 h-1 -top-1 -left-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-          <span className="absolute w-1 h-1 -bottom-1 -right-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-          <span className="absolute w-1 h-1 -bottom-1 -left-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-        </h1>
-        <p className="mt-4 text-secondary dark:text-secondary">
+       <DotBox>Get In Touch</DotBox>
+        <p className="mt-4 text-sm md:text-md text-secondary dark:text-secondary">
           I'm currently exploring new opportunities. If you have any questions
           or just want to say hello, feel free to contact me.
         </p>
-        <form onSubmit={handleSubmit} className="relative mt-4">
+        <form onSubmit={handleSubmit} className="relative mt-4 ">
           <input
             type="email"
             value={email}

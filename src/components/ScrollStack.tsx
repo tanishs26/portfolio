@@ -3,6 +3,7 @@ import Container from "./Container";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import DotBox from "./DotBox";
 
 const stack = [
   {
@@ -41,13 +42,9 @@ const stack = [
 const ScrollStack = () => {
   return (
     <Container className="mt-8 p-4">
-      <h1 className="text-shadow-xs text-primary px-2 bg-black/10 dark:bg-white/10 w-fit relative">
-        Tech stack
-        <span className="absolute w-1 h-1 -top-1 -right-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-        <span className="absolute w-1 h-1 -top-1 -left-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-        <span className="absolute w-1 h-1 -bottom-1 -right-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-        <span className="absolute w-1 h-1 -bottom-1 -left-1 rounded-full bg-neutral-400 dark:bg-neutral-700"></span>
-      </h1>
+      <DotBox>
+        Technologies I Use
+      </DotBox>
       <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-center  relative z-10 py-10 max-w-4xl mx-auto ">
         {stack.map((feature, index) => (
           <motion.div

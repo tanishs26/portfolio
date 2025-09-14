@@ -10,6 +10,11 @@
 body{
   cursor: none;
 }
+.shadow-me{
+  box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.5), /* left inset shadow */
+            inset -5px 0 5px -5px rgba(0, 0, 0, 0.5); /* right inset shadow */
+
+}
 
 .dark {
   --color-primary: var(--color-neutral-100);

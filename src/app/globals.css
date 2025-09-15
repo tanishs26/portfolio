@@ -13,7 +13,10 @@ body{
 .shadow-me{
   box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.5), /* left inset shadow */
             inset -5px 0 5px -5px rgba(0, 0, 0, 0.5); /* right inset shadow */
-
+}
+.about{
+   background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); 
+   background-size: 20px 20px
 }
 
 .dark {

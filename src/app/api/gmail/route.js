@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const { name, email, message } = await request.json();
+    const { email } = await request.json();
 
     // Validate email
     if (!email) {
@@ -29,28 +29,11 @@ export async function POST(request) {
               <h2 style="color: #333; margin-top: 0;">Contact Details</h2>
               
               <div style="margin: 20px 0;">
-                <p style="margin: 8px 0;"><strong style="color: #555;">Name:</strong> ${name}</p>
                 <p style="margin: 8px 0;"><strong style="color: #555;">Email:</strong> ${email}</p>
               </div>
-              
-              <h3 style="color: #333; margin-top: 30px;">Message</h3>
-              <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #667eea; border-radius: 4px; margin: 15px 0;">
-                <p style="margin: 0; line-height: 1.6; color: #333;">${message.replace(
-                  /\n/g,
-                  "<br>"
-                )}</p>
-              </div>
-              
-              <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e9ecef;">
-                <p style="margin: 0; color: #666; font-size: 14px;">
-                  <strong>Reply directly to this email</strong> to contact ${name} at ${email}
-                </p>
-              </div>
-            </div>
-            
             <div style="text-align: center; margin-top: 20px;">
               <p style="color: #666; font-size: 12px; margin: 0;">
-                Sent from your portfolio contact form
+                Sent from your portfolio contact 
               </p>
             </div>
           </div>

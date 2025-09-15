@@ -33,7 +33,7 @@ const Footer = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/enquiry", {
+      const response = await fetch("/api/gmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,32 +65,34 @@ const Footer = () => {
     };
   }, []);
 
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: [0, 1],
-        filter: ["blur(10px)", "blur(0px)"],
-        y: [-10, 0],
-        x: [0, -2, 2, -2, 2, 0],
-      },
-      { duration: 0.5, ease: "easeInOut" }
-    );
-  }, [count, animate]);
 
   return (
-    <Container className="p-4 mt-10 ">
-      <div ref={scope} className="w-full flex justify-center ">
-        <span className="enq text-secondary bg-gray-300/10 dark:bg-white/15 dark:text-secondary text-center font-semibold text-xl shadow-input/60 px-4 rounded-md py-1">
+    <Container className="p-4 py-10 ">
+      <div className="w-full  text-center">
+        <motion.span
+          key={count}
+          initial={{
+            filter: "blur(10px)",
+            opacity: 0,
+            y: -20,
+            x: 0,
+          }}
+          animate={{
+            opacity: 1,
+            filter: "blur(0px)",
+            y: 0,
+            x: [-2, 2, -2, 2, 0],
+          }}
+          className="p-2 text-2xl md:text-3xl mx-auto  font-semibold text-secondary dark:text-secondary py-1 inline-block rounded-lg border-gray-400  bg-neutral-800/15"
+        >
           {enquiry[count].title}
-        </span>
+        </motion.span>
       </div>
-      <div className="w-full md:w-[60%] mt-7  ">
-       <DotBox>Get In Touch</DotBox>
-        <p className="mt-4 text-sm md:text-md text-secondary dark:text-secondary">
-          I'm currently exploring new opportunities. If you have any questions
+
+      <div className="w-full md:w-[60%] mt-10 space-y-5  ">
+        <DotBox>Get In Touch</DotBox>
+        <p className="mt-4 text-md  md:text-md text-secondary dark:text-secondary">
+          I am currently exploring new opportunities. If you have any questions
           or just want to say hello, feel free to contact me.
         </p>
         <form onSubmit={handleSubmit} className="relative mt-4 ">

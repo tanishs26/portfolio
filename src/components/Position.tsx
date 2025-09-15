@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimate } from "framer-motion";
+import {motion, useAnimate } from "framer-motion";
 
 const Position = () => {
   const posiArray = [
@@ -17,26 +17,24 @@ const Position = () => {
     };
   }, []);
 
+  const [scope, animate] = useAnimate();
+  
   return (
     <motion.span
     key={count}
       initial={{
         filter: "blur(10px)",
         opacity: 0,
-        y: -10, 
+        y: -20,
         x: 0,
       }}
       animate={{
         opacity: 1,
         filter: "blur(0px)",
         y: 0,
-        x:[0,-2,2,-2,2,0]
+        x:[-2,2,-2,2,0]
       }}
-      transition={{
-        duration: 0.3,
-        ease: "easeInOut",
-      }}
-      className="text-sm   bg-neutral-700/5   p-2 py-1 inline-block rounded-lg border-gray-400 text-neutral-500"
+      className="p-2 text-sm text-secondary dark:text-secondary py-1 inline-block rounded-lg border-gray-400  bg-neutral-700/5 "
     >
       {posiArray[count]}
     </motion.span>

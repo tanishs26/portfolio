@@ -8,11 +8,14 @@ type ContainerProps = {
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
     <div
-      className={`bg-white dark:bg-[#171717] 
-shadow-me
-          max-w-4xl mx-auto h-full  ${className}`}
+      className={` 
+          max-w-[950px] mx-auto h-full`}
     >
-      {children}
+      <div
+        className={`max-w-4xl mx-auto bg-white dark:bg-[#171717] ${className}`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

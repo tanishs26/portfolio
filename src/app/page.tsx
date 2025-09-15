@@ -36,7 +36,7 @@ export default function Home() {
             <Position />
           </div>
         </motion.h1>
-        <Subheading>
+        <Subheading className="md:w-[60%]">
           Frontend Developer with a strong background in building user-friendly
           web applications. Experienced in developing full-stack SaaS projects.
         </Subheading>
@@ -45,7 +45,9 @@ export default function Home() {
         <DotBox>I Create Ideas</DotBox>
         <Projects projects={projectsHome}/>
       </div>
+
       <ScrollStack />
+      
       <Footer />
     </Container>
   );

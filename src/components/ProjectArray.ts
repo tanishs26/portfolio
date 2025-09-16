@@ -10,7 +10,7 @@ import { FaReact } from "react-icons/fa";
 export const projectsHome = [
   {
     title: "Muse-Music Player",
-    href: "#",
+    href: "https://muse-tan.vercel.app",
     img: "/muse.png",
     desc: "Music player with mobile and desktop layouts feature seamless play, pause, skip, repeat and volume controls.",
     icon: [
@@ -22,7 +22,7 @@ export const projectsHome = [
   },
   {
     title: "Frosty - Movie Search",
-    href: "#",
+    href: "https://frosty-roan.vercel.app",
     img: "/frosty.png",
     desc: "Web app for movie search and trending listings in real-time using the TMDb API",
     icon: [
@@ -33,7 +33,7 @@ export const projectsHome = [
   },
   {
     title: "Horizon - A Blog App",
-    href: "#",
+    href: "https://horizon-lilac.vercel.app",
     img: "/horizon.png",
     desc: "Full-stack blog platform with user authentication, image upload, and edit features for users.",
     icon: [
@@ -47,7 +47,7 @@ export const projectsHome = [
 export const projects = [
   {
     title: "Muse-Music Player",
-    href: "#",
+    href: "https://muse-tan.vercel.app",
     img: "/muse.png",
     desc: "Music player with mobile and desktop layouts feature seamless play, pause, skip, repeat and volume controls.",
     icon: [
@@ -59,7 +59,7 @@ export const projects = [
   },
   {
     title: "Frosty - Movie Search",
-    href: "#",
+    href: "https://frosty-roan.vercel.app",
     img: "/frosty.png",
     desc: "Web app for movie search and trending listings in real-time using the TMDb API",
     icon: [
@@ -70,7 +70,7 @@ export const projects = [
   },
   {
     title: "Horizon - A Blog App",
-    href: "#",
+    href: "https://horizon-lilac.vercel.app",
     img: "/horizon.png",
     desc: "Full-stack blog platform with user authentication, image upload, and edit features for users.",
     icon: [
@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     title: "Redis - Clone",
-    href: "#",
+    href: "https://redis-olive.vercel.app",
     img: "/redis.png",
     desc: "Tried to build a redis landing page clone with responsiveness and crystal clear design",
     icon: [
@@ -92,7 +92,7 @@ export const projects = [
   },
   {
     title: "Currency - Converter App",
-    href: "#",
+    href: "https://tanishs26.github.io/currency/",
     img: "/currency.png",
     desc: "A currency converter app that allows users to convert between different currencies in real-time.",
     icon: [
@@ -102,7 +102,7 @@ export const projects = [
   },
   {
     title: "Weath - Weather App",
-    href: "#",
+    href: "https://tanishs26.github.io/weath/",
     img: "/weath.png",
     desc: "A weather app that provides real-time weather updates and forecasts for any location.",
     icon: [
